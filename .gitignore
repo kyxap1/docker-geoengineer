@@ -1,0 +1,15 @@
+*delme*
+*outdated*
+crash.log
+.idea/
+*.iml
+.modules
+#best-practices/terraform/modules
+fasten-ansible/
+**/.terraform
+**/.terraform/*
+**/.envrc
+*/*.retry
+*.log
+terraform.tfstate
+.DS_Store
