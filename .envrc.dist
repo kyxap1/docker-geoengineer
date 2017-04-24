@@ -1,0 +1,8 @@
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_REGION=
+TF_VERSION=0.9.3
+export "${!AWS_@}" "${!TF_@}"
+
+# vim: filetype=sh
+
