@@ -1,10 +1,10 @@
-FROM ruby:2.3.3
+FROM ruby:2.4.1
 
 ARG TF_VERSION
 ARG AWS_REGION
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
-ENV TF_VERSION ${TF_VERSION:-0.9.3}
+ENV TF_VERSION ${TF_VERSION:-0.9.4}
 WORKDIR /app
 RUN \
       apt-get update -qq && apt-get install -qq\

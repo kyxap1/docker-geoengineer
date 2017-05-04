@@ -1,7 +1,7 @@
 ORG=fasten
 NAME=geoengineer
 CONTAINER=$(ORG)/$(NAME)
-
+ARGS = $1
 SHELL=/bin/bash
 all: build
 
@@ -18,7 +18,7 @@ run:
 		-e AWS_ACCESS_KEY_ID=$$AWS_ACCESS_KEY_ID \
 		-e AWS_REGION=$$AWS_REGION \
 		-e AWS_SECRET_ACCESS_KEY=$$AWS_SECRET_ACCESS_KEY \
-		--name $(NAME) -d $(CONTAINER)
+		--name $(NAME) -it --rm -v ${PWD}:${PWD} $(CONTAINER) $(ARGS)
 logs:
 	@docker logs -f $(NAME)
 clean:
